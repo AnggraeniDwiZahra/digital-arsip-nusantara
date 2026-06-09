@@ -7,7 +7,7 @@
         <p class="text-muted small mb-0">Lacak dan kelola semua progres proyek digitalisasi arsip Anda</p>
     </div>
 
-    <form action="/riwayat" method="GET">
+    <form action="{{ route('app.documents.history') }}" method="GET">
         <div class="card border-0 shadow-sm p-3 bg-white mb-4" style="border-radius: 12px;">
             <div class="row g-3 align-items-center">
                 <div class="col-12 col-md-6">

@@ -116,10 +116,10 @@
     <div class="flex-grow-1 d-flex flex-column min-vh-100" style="background-color: #f8f9fa;">
         
         <div class="header-top d-flex align-items-center justify-content-between px-4 flex-shrink-0">
-            <div class="search-wrapper position-relative" style="width: 350px;">
+            <form action="{{ route('app.documents.search') }}" method="GET" class="search-wrapper position-relative" style="width: 350px;">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" class="form-control search-bar" placeholder="Search">
-            </div>
+                <input type="text" name="keyword" class="form-control search-bar" placeholder="Cari dokumen di sini..." value="{{ request('keyword') }}">
+            </form>
 
             <div class="d-flex align-items-center gap-4">
                 <button class="btn p-0 position-relative border-0 text-secondary">

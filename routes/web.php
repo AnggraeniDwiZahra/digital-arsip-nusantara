@@ -32,6 +32,11 @@ Route::prefix('app')->name('app.')->group(function () {
     // Halaman Cari Dokumen 
     Route::get('/cari', [DocumentController::class, 'search'])->name('documents.search');
     
+    // TAMBAHAN: Halaman Detail Preview Dokumen (Dinamis di dalam grup app)
+    // URL di browser akan menjadi: digital-arsip-nusantara.test/app/document/PRJ-2030-032
+    // Nama rute internalnya menjadi: app.documents.show
+    Route::get('/document/{id}', [DocumentController::class, 'show'])->name('documents.show');
+    
     // Halaman Log Akses 
     Route::get('/log-akses', [LogController::class, 'index'])->name('logs');
     
