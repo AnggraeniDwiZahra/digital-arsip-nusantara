@@ -9,11 +9,12 @@ use Illuminate\Support\Facades\Hash;
 class DatabaseSeeder extends Seeder
 {
     public function run(): void
-       {
-           User::factory()->create([
-               'name' => 'Admin Nusantara',
-               'email' => 'admin@arsip.id',
-               'password' => Hash::make('password123'),
-           ]);
-       }
+    {
+        // Mengubah data seeder menjadi akun User/Klien biasa
+        User::factory()->create([
+            'name' => 'User Nusantara',
+            'email' => 'user@arsip.id',
+            'password' => Hash::make('password123'),
+        ]);
+    }
 }

@@ -16,6 +16,9 @@ Route::get('/login', function () {
     return view('auth.login'); 
 })->name('login');
 
+Route::post('/login', function () {
+    return redirect()->route('app.dashboard');
+});
 
 // Grup Rute Aplikasi (Diakses setelah pengguna login)
 Route::prefix('app')->name('app.')->group(function () {

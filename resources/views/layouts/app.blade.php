@@ -66,58 +66,51 @@
             
             <ul class="nav nav-pills flex-column px-1">
                 <li class="nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link {{ Route::is('dashboard') ? 'active' : '' }} d-flex align-items-center gap-3">
+                    <a href="{{ route('app.dashboard') }}" class="nav-link {{ Route::is('app.dashboard') ? 'active' : '' }} d-flex align-items-center">
                         <i class="fa-solid fa-table-columns text-center" style="width: 20px;"></i>
-                        <span>Dashboard</span>
+                        <span class="ms-3">Dashboard</span>
                     </a>
                 </li>
                 
                 <li class="nav-item">
-                    <a href="{{ route('documents.history') }}" class="nav-link {{ Route::is('documents.history') ? 'active' : '' }} d-flex align-items-center gap-3">
+                    <a href="{{ route('app.documents.history') }}" class="nav-link {{ Route::is('app.documents.history') ? 'active' : '' }} d-flex align-items-center">
                         <i class="fa-solid fa-clock-rotate-left text-center" style="width: 20px;"></i>
-                        <span>Riwayat Digitalisasi</span>
+                        <span class="ms-3">Riwayat Digitalisasi</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('documents.search') }}" class="nav-link {{ Route::is('documents.search') ? 'active' : '' }} d-flex align-items-center gap-3">
+                    <a href="{{ route('app.documents.search') }}" class="nav-link {{ Route::is('app.documents.search') ? 'active' : '' }} d-flex align-items-center">
                         <i class="fa-solid fa-magnifying-glass text-center" style="width: 20px;"></i>
-                        <span>Cari Dokumen</span>
+                        <span class="ms-3">Cari Dokumen</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a href="{{ route('logs') }}" class="nav-link {{ Route::is('logs') ? 'active' : '' }} d-flex align-items-center gap-3">
+                    <a href="{{ route('app.logs') }}" class="nav-link {{ Route::is('app.logs') ? 'active' : '' }} d-flex align-items-center">
                         <i class="fa-solid fa-list-check text-center" style="width: 20px;"></i>
-                        <span>Log Akses</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="{{ route('consultation') }}" class="nav-link {{ Route::is('consultation') ? 'active' : '' }} d-flex align-items-center gap-3">
-                        <i class="fa-solid fa-comments text-center" style="width: 20px;"></i>
-                        <span>Konsultasi</span>
-                    </a>
-                </li>
-            
-                <li class="nav-item">
-                    <a href="{{ route('settings') }}" class="nav-link {{ Route::is('settings') ? 'active' : '' }} d-flex align-items-center gap-3">
-                        <i class="fa-solid fa-gear text-center" style="width: 20px;"></i>
-                        <span>Pengaturan</span>
+                        <span class="ms-3">Log Akses</span>
                     </a>
                 </li>
             </ul>
         </div>
 
-        <div class="pt-3 border-top border-secondary d-flex align-items-center gap-3 text-white">
-            <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; flex-shrink: 0;">
-                AU
-            </div>
-            <div class="overflow-hidden text-truncate">
-                <p class="mb-0 small fw-bold text-truncate">Admin User</p>
-                <p class="mb-0 text-light-50 text-truncate" style="font-size: 11px;">admin@arsip.id</p>
-            </div>
+        <div class="pt-3 border-top border-secondary d-flex flex-column gap-3">
+            <div class="d-flex align-items-center gap-3 text-white">
+        <div class="rounded-circle bg-secondary d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; flex-shrink: 0;">
+            UN
         </div>
+        <div class="overflow-hidden text-truncate flex-grow-1">
+            <p class="mb-0 small fw-bold text-truncate">User Nusantara</p>
+            <p class="mb-0 text-light-50 text-truncate" style="font-size: 11px;">user@arsip.id</p>
+        </div>
+    </div>
+    
+    <a href="{{ route('landing') }}" class="btn btn-sm btn-outline-danger w-100 d-flex align-items-center justify-content-center gap-2 py-2" style="border-radius: 8px; font-size: 13px;">
+        <i class="fa-solid fa-right-from-bracket"></i>
+        <span>Keluar Aplikasi</span>
+    </a>
+</div>
     </div>
 
     <div class="flex-grow-1 d-flex flex-column min-vh-100" style="background-color: #f8f9fa;">
@@ -135,11 +128,11 @@
                 </button>
                 <div class="d-flex align-items-center gap-2 border-start ps-3">
                     <div class="text-end d-none d-sm-block">
-                        <p class="mb-0 small fw-bold text-dark">Admin User</p>
-                        <p class="mb-0 text-muted" style="font-size: 11px;">Administrator</p>
+                        <p class="mb-0 small fw-bold text-dark">User Nusantara</p>
+                        <p class="mb-0 text-muted" style="font-size: 11px;">Klien Utama</p>
                     </div>
                     <div class="rounded-circle bg-purple text-purple fw-bold d-flex align-items-center justify-content-center text-primary-emphasis bg-primary-subtle" style="width: 35px; height: 35px; font-size: 13px;">
-                        AU
+                        UN
                     </div>
                 </div>
             </div>
