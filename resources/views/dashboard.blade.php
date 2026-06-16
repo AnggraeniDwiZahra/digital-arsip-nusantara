@@ -8,49 +8,6 @@
     </div>
 
     <div class="row g-3 mb-4">
-        <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius: 12px;">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h6 class="text-muted fw-semibold mb-0" style="font-size: 14px;">Total Dokumen</h6>
-                    <span class="text-secondary"><i class="fa-solid fa-file-lines fs-5"></i></span>
-                </div>
-                <h2 class="fw-bold mb-2 text-dark">{{ $stats['total_dokumen'] }}</h2>
-                <span class="text-success small fw-medium">
-                    <i class="fa-solid fa-arrow-trend-up me-1"></i> {{ $stats['tren_bulan_lalu'] }} dari bulan lalu
-                </span>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius: 12px;">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h6 class="text-muted fw-semibold mb-0" style="font-size: 14px;">Progress Proyek</h6>
-                    <span class="text-secondary"><i class="fa-solid fa-folder-closed fs-5"></i></span>
-                </div>
-                <h2 class="fw-bold mb-3 text-dark">{{ $stats['progress_proyek'] }}%</h2>
-                <div class="progress" style="height: 6px;">
-                    <div class="progress-bar bg-primary" role="progressbar" style="width: {{ $stats['progress_proyek'] }}%" aria-valuenow="{{ $stats['progress_proyek'] }}" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                <small class="text-muted mt-2 d-block" style="font-size: 11px;">Sesuai jadwal penyelesaian</small>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-4">
-            <div class="card border-0 shadow-sm p-4 h-100 bg-white" style="border-radius: 12px;">
-                <div class="d-flex justify-content-between align-items-start mb-3">
-                    <h6 class="text-muted fw-semibold mb-0" style="font-size: 14px;">Penyimpanan Database</h6>
-                    <span class="text-secondary"><i class="fa-solid fa-database fs-5"></i></span>
-                </div>
-                <h2 class="fw-bold mb-2 text-dark">{{ $stats['penyimpanan_terpakai'] }} GB</h2>
-                <div class="d-flex align-items-center justify-content-between mt-3">
-                    <div class="progress flex-grow-1 me-3" style="height: 6px;">
-                        <div class="progress-bar bg-dark" role="progressbar" style="width: {{ $stats['persen_penyimpanan'] }}%" aria-valuenow="{{ $stats['persen_penyimpanan'] }}" aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <small class="text-muted" style="font-size: 11px; white-space: nowrap;">{{ $stats['persen_penyimpanan'] }}% dari {{ $stats['penyimpanan_maksimal'] }} GB</small>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <div class="row g-3">
         <div class="col-12">

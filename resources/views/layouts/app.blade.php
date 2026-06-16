@@ -48,6 +48,12 @@
             transform: translateY(-50%);
             color: #adb5bd;
         }
+        .brand-logo-link {
+            transition: opacity 0.2s ease-in-out;
+        }
+        .brand-logo-link:hover {
+            opacity: 0.85; 
+        }
     </style>
 </head>
 <body>
@@ -56,13 +62,13 @@
     
     <div class="sidebar d-flex flex-column justify-content-between p-3 sticky-top" style="height: 100vh; min-width: 260px; max-width: 260px;">
         <div>
-            <div class="d-flex align-items-center gap-3 pb-4 mb-3 border-bottom border-secondary text-white">
-                <i class="fa-solid fa-box-archive fs-4 text-info"></i>
-                <div>
-                    <h6 class="fw-bold mb-0 tracking-wider">Digital-Arsip</h6>
-                    <small class="text-light-50" style="font-size: 11px;">Nusantara</small>
-                </div>
-            </div>
+            <a href="{{ route('landing') }}" class="d-flex align-items-center gap-3 pb-4 mb-3 border-bottom border-secondary text-white text-decoration-none brand-logo-link">
+    <i class="fa-solid fa-box-archive fs-4 text-info"></i>
+    <div>
+        <h6 class="fw-bold mb-0 tracking-wider text-white">Digital-Arsip</h6>
+        <small class="text-light-50 d-block" style="font-size: 11px;">Nusantara</small>
+    </div>
+</a>
             
             <ul class="nav nav-pills flex-column px-1">
                 <li class="nav-item">
@@ -83,13 +89,6 @@
                     <a href="{{ route('app.documents.search') }}" class="nav-link {{ Route::is('app.documents.search') ? 'active' : '' }} d-flex align-items-center">
                         <i class="fa-solid fa-magnifying-glass text-center" style="width: 20px;"></i>
                         <span class="ms-3">Cari Dokumen</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a href="{{ route('app.logs') }}" class="nav-link {{ Route::is('app.logs') ? 'active' : '' }} d-flex align-items-center">
-                        <i class="fa-solid fa-list-check text-center" style="width: 20px;"></i>
-                        <span class="ms-3">Log Akses</span>
                     </a>
                 </li>
             </ul>
